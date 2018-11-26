@@ -1,0 +1,26 @@
+escape ^J^J
+
+caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d %{=b wm}%c"
+
+#encoding
+defkanji utf-8
+defencoding utf-8
+encoding utf-8 utf-8
+
+autodetach
+
+defscrollback 10000
+
+#split window
+bind S eval split focus "select 0"
+bind | eval "split -v" focus "select 0"
+
+#resize
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^]  command
+bind -c resize j eval 'resize -v -p +1' 'command -c resize'
+bind -c resize k eval 'resize -v -p -1' 'command -c resize'
+bind -c resize l eval 'resize -h -p +1' 'command -c resize'
+bind -c resize h eval 'resize -h -p -1' 'command -c resize'
+bind -c resize = eval 'resize =' 'command -c resize'
+

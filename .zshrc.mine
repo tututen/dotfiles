@@ -1,0 +1,12 @@
+# PATH
+PATH=/usr/local/bin:${PATH}
+
+# ディレクトリの色をシアンに
+export LSCOLORS=gxfxcxdxbxegedabagacad
+export LS_COLORS="${LS_COLORS}:di=00;36"
+
+# virtualenv
+export WORKON_HOME=$HOME/_sandbox
+export PIP_RESPECT_VIRTUALENV=true
+export PIP_DOWNLOAD_CACHE=$HOME/.pip_cache
+source /usr/local/python/bin/virtualenvwrapper.sh
